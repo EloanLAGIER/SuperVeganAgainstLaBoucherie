@@ -12,7 +12,8 @@ public class SuperVegan : MonoBehaviour
     private int jumpcount;
     private Ray hitray;
     private RaycastHit hit;
-    public GameObject ennemi;
+    private GameObject ennemi;
+    public GameObject sprite;
 
     private BoxCollider box;
     // Start is called before the first frame update
@@ -65,11 +66,13 @@ public class SuperVegan : MonoBehaviour
         }
         if (Input.GetAxisRaw("Horizontal")>0)
         {
+            sprite.GetComponent<SpriteRenderer>().flipX = false;
             centerBox.x = 2;
             box.center= centerBox;
         }
         if (Input.GetAxisRaw("Horizontal") < 0)
         {
+            sprite.GetComponent<SpriteRenderer>().flipX = true;
             centerBox.x = -2;
             box.center = centerBox;
         }
