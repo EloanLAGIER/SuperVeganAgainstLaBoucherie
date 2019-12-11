@@ -60,10 +60,6 @@ public class SuperVegan : MonoBehaviour
     void Update()
     {
         timercoup += Time.deltaTime;
-        if (timercoup > 1)
-        {
-            anim.SetBool("coup", false);
-        }
 
         mouvement.x = Input.GetAxisRaw("Horizontal") * speed;
         hitray = new Ray(transform.position, new Vector3(mouvement.x, 0.0f, 0.0f));
@@ -71,7 +67,7 @@ public class SuperVegan : MonoBehaviour
         if ((Input.GetButtonDown("Fire1")) & (timercoup > 1.2) & (Input.GetAxisRaw("Horizontal")!=0)&(controller.isGrounded))
         {
             timercoup = 0;
-            anim.SetBool("coup", true);
+            anim.SetTrigger("c");
             sv.loop = false;
             sv.clip = coup;
             sv.Play();
@@ -83,11 +79,11 @@ public class SuperVegan : MonoBehaviour
         }
         if (controller.isGrounded)
         {
-            anim.SetBool("saut", false);
+            anim.SetTrigger("sol");
             mouvement.y = 0;
             jumpcount = 0;
         }
-        if (Input.GetAxisRaw("Horizontal")>0)
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             if ((sv.loop == false) & (controller.isGrounded) & (timercoup>1.2))
             {
@@ -99,15 +95,13 @@ public class SuperVegan : MonoBehaviour
             }
             time = 0f;
 
-            anim.SetBool("droite", true);
-            anim.SetBool("gauche", false);
-            anim.SetBool("repos", false);
+            anim.SetTrigger("d");
             centerBox.x = 2;
             box.center = centerBox;
 
 
         }
-         if (Input.GetAxisRaw("Horizontal")<0)
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             if ((sv.loop == false)& (controller.isGrounded) & (timercoup > 1.2))
             {
@@ -118,35 +112,34 @@ public class SuperVegan : MonoBehaviour
             }
             time = 0f;
             
-            anim.SetBool("droite", false);
-            anim.SetBool("gauche", true);
-            anim.SetBool("repos", false);
+            
+            anim.SetTrigger("g");
+            
             centerBox.x = -2;
             box.center = centerBox;
 
         }
-        if(Input.GetAxisRaw("Horizontal")==0)
+        if (mouvement.x==0)
         {
-            time += Time.deltaTime;
-            if( (time > 0.2f)&(controller.isGrounded) & (timercoup > 1.2))
+
+            if((controller.isGrounded) & (timercoup > 1.2))
             {
+                Debug.Log(time);
+                time = 0f;
                 sv.Stop();
                 sv.loop = false;
                 
-                anim.SetBool("droite", false);
-                anim.SetBool("gauche", false);
-                anim.SetBool("repos", true);
+                anim.SetTrigger("r");
             }
         }
     
         if (Input.GetButtonDown("Jump") && (jumpcount<3) & (timercoup > 1.2))
         {
-            anim.SetBool("coup", false);
             sv.loop = false;
             sv.clip = saut;
             sv.Play();
             mouvement.y = jumpSpeed;
-            anim.SetBool("saut", true);
+            anim.SetTrigger("s");
             
             jumpcount+=1; 
         }
