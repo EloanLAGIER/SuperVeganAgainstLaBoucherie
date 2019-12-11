@@ -16,13 +16,14 @@ public class Boucher : MonoBehaviour
     public Goutte goutte;
     public GameObject sprite;
     public int vie;
-    public AudioSource cri;
+    private AudioSource cri;
     public AudioClip cri1;
     public AudioClip cri2;
     public AudioClip dead;
     // Start is called before the first frame update
     void Awake()
     {
+        cri = GetComponent<AudioSource>();
         vie = 100;
         controller = GetComponent<CharacterController>();
         sens = -1;

@@ -1,0 +1,391 @@
+fileFormatVersion: 2
+guid: a6a4427b4c16c1041a3d197527eacefd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7673931785281597998
+    second: coupdepied2_0
+  - first:
+      213: -848695233085541178
+    second: coupdepied2_1
+  - first:
+      213: -168217370514041768
+    second: coupdepied2_2
+  - first:
+      213: -6211185725803324906
+    second: coupdepied2_3
+  - first:
+      213: 5195311376304797156
+    second: coupdepied2_4
+  - first:
+      213: 2317422122905917695
+    second: coupdepied2_5
+  - first:
+      213: -6005418471755532752
+    second: coupdepied2_6
+  - first:
+      213: 4104485500810717777
+    second: coupdepied2_7
+  - first:
+      213: 3291727799499487426
+    second: coupdepied2_8
+  - first:
+      213: -5124871407399756385
+    second: coupdepied2_9
+  - first:
+      213: 5705312444967684163
+    second: coupdepied2_10
+  - first:
+      213: 7482479190694421067
+    second: coupdepied2_11
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: coupdepied2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 321
+        width: 222.33333
+        height: 321
+      alignment: 9
+      pivot: {x: 0.0764433, y: 0.46383154}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f157a0ab1f917e4184e223ca8792850
+      internalID: 7673931785281597998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coupdepied2_1
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 321
+        width: 222.33333
+        height: 321
+      alignment: 9
+      pivot: {x: 0.41296777, y: 0.39953196}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df20dbf841c1a6b47805cc6e3c9c7bc0
+      internalID: -848695233085541178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coupdepied2_2
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 321
+        width: 222.33333
+        height: 321
+      alignment: 9
+      pivot: {x: 0.40716562, y: 0.45981282}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a243892c3a718e4e96efed5ca099cf4
+      internalID: -168217370514041768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coupdepied2_3
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 321
+        width: 222.33333
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56239d8efcd808c4e87d8c45bc4226f9
+      internalID: -6211185725803324906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coupdepied2_4
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 321
+        width: 222
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5290544, y: 0.49598128}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ded75f68b65c7564d9102f2bec2ac0a3
+      internalID: 5195311376304797156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coupdepied2_5
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 321
+        width: 222.33333
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5522192, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea35d1e328b3ee144b418d21ede99713
+      internalID: 2317422122905917695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coupdepied2_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 222.33333
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c4a681a0e8c1c42ba6c85dfcdfb5e1
+      internalID: -6005418471755532752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coupdepied2_7
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 0
+        width: 222.33333
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f08c3413f77034f8f98626a2e703bc
+      internalID: 4104485500810717777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coupdepied2_8
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 0
+        width: 222.33333
+        height: 321
+      alignment: 9
+      pivot: {x: 0.44197872, y: 0.4115882}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb87fb5a0ae32647b44aa4d6c7b9703
+      internalID: 3291727799499487426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coupdepied2_9
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 0
+        width: 222
+        height: 321
+      alignment: 9
+      pivot: {x: 0.29661986, y: 0.45177543}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50129bd5ebc800c4c8c1ec66030fb829
+      internalID: -5124871407399756385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coupdepied2_10
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 0
+        width: 222.33333
+        height: 321
+      alignment: 9
+      pivot: {x: 0.33753997, y: 0.5000001}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33b7a38e8aec694469da1d9ac10875e5
+      internalID: 5705312444967684163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coupdepied2_11
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 0
+        width: 222.33333
+        height: 321
+      alignment: 9
+      pivot: {x: 0.30272686, y: 0.4598129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c170f4918cde7f4b9348a241c8518c4
+      internalID: 7482479190694421067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 83fce24eac6b9e047861bc4947fd5f3a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
