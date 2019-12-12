@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2046551965224077310}
   - component: {fileID: 9222393903747927519}
+  - component: {fileID: 7690447893936433660}
   m_Layer: 11
   m_Name: tache
   m_TagString: Untagged
@@ -80,3 +81,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &7690447893936433660
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6525182570590651391}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.33, y: 8.000002, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}

@@ -30,6 +30,7 @@ public class Goutte : MonoBehaviour
             col = collision.contacts[0].point;
             col.z += 0.1f;
             GameObject t = Instantiate(tache, col,Quaternion.Euler(0,90,0));
+            t.GetComponent<BoxCollider>().isTrigger = true;
             col = t.transform.position;
             col.x += 0.1f;
             t.transform.position=col;
@@ -40,6 +41,7 @@ public class Goutte : MonoBehaviour
             col = collision.contacts[0].point;
             col.z += 0.1f;
             GameObject t = Instantiate(tache, col, Quaternion.Euler(0, 90, 0));
+            t.GetComponent<BoxCollider>().isTrigger = true;
             col = t.transform.position;
             col.x -= 0.1f;
             t.transform.position = col;
@@ -47,12 +49,11 @@ public class Goutte : MonoBehaviour
         }
         else
         {
-            Debug.Log(collision.collider.tag);
             col = collision.contacts[0].point;
             col.y += 0.1f;
-            Instantiate(tache, col, tache.transform.rotation);
+            GameObject t = Instantiate(tache, col, tache.transform.rotation);
+            t.GetComponent<BoxCollider>().isTrigger = true; 
 
-            
         }
         Destroy(GetComponent<Rigidbody>());
         Destroy(GetComponent<MeshRenderer>());

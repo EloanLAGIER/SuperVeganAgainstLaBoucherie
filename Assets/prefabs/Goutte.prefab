@@ -126,3 +126,4 @@ MonoBehaviour:
   force: 50
   tache: {fileID: 6525182570590651391, guid: 65b697eac9b35df47a60d0a1a568218e, type: 3}
   position: {x: 0, y: 0, z: 0}
+  col: {x: 0, y: 0, z: 0}

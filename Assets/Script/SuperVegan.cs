@@ -7,78 +7,53 @@ public class SuperVegan : MonoBehaviour
 {
     public float speed, jumpSpeed, gravity;
     private Vector3 mouvement;
-    private Vector3 centerBox;
+    
     private CharacterController controller;
     private int jumpcount;
-    private Ray hitray;
-    private RaycastHit hit;
-    public GameObject ennemi;
-    public GameObject sprit;
+    public Ennemi ennemi;
     private Animator anim;
     private float time;
-    private BoxCollider box;
-    private float sens;
-    private float timecour;
-    private AudioSource sv;
-    public AudioClip cour;
-    public AudioClip saut;
-    public AudioClip coup;
+
+    private int sens;
     private float timercoup;
     // Start is called before the first frame update
     void Awake()
     {
-        sv = GetComponent<AudioSource>();
-        sens = 0;
+        
+        sens = 1;
         ennemi = null;
-        anim = sprit.GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
-        box = GetComponent<BoxCollider>();
-        hitray = new Ray(transform.position, new Vector3(15f, 0.0f, 0.0f));
-        centerBox = box.center;
+        
         timercoup = 3;
     }
 
-    void OnTriggerEnter(Collider other)
+    public int Getsens()
     {
-
-
-        ennemi = other.gameObject;
-        if (other.gameObject.name == "Boucher")
+        return sens;
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision.gameObject);
+        if (collision.gameObject.GetComponent<Ennemi>())
         {
-            ennemi = other.gameObject;
-
-
+            collision.gameObject.GetComponent<Ennemi>().PrendunCoup();
         }
-
-
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        ennemi = null;
-    }
+
     void Update()
     {
-        timercoup += Time.deltaTime;
-        if (timercoup > 1)
-        {
-            anim.SetBool("coup", false);
-        }
+
+
 
         mouvement.x = Input.GetAxisRaw("Horizontal") * speed;
-        hitray = new Ray(transform.position, new Vector3(mouvement.x, 0.0f, 0.0f));
         mouvement.y -= gravity * Time.deltaTime;
-        if ((Input.GetButtonDown("Fire1")) & (timercoup > 1.2) & (Input.GetAxisRaw("Horizontal")!=0)&(controller.isGrounded))
+        if ((Input.GetButtonDown("Fire1")) )
         {
             timercoup = 0;
-            anim.SetBool("coup", true);
-            sv.loop = false;
-            sv.clip = coup;
-            sv.Play();
-            if (ennemi != null)
-            {
-                ennemi.GetComponent<Boucher>().PrendunCoup();
-            }
+            anim.SetTrigger("coup");
+
 
         }
         if (controller.isGrounded)
@@ -89,84 +64,55 @@ public class SuperVegan : MonoBehaviour
         }
         if (Input.GetAxisRaw("Horizontal")>0)
         {
-            if ((sv.loop == false) & (controller.isGrounded) & (timercoup>1.2))
-            {
-                sv.clip = cour;
-                sv.Play();
-                sv.loop = true;
-                
-                
-            }
+            
             time = 0f;
-
+            
             anim.SetBool("droite", true);
             anim.SetBool("gauche", false);
             anim.SetBool("repos", false);
-            centerBox.x = 2;
-            box.center = centerBox;
-
+            anim.SetBool("sens", true);
+            sens = 1;
+            
 
         }
          if (Input.GetAxisRaw("Horizontal")<0)
         {
-            if ((sv.loop == false)& (controller.isGrounded) & (timercoup > 1.2))
-            {
-                sv.clip = cour;
-                sv.Play();
-                sv.loop = true;
-                
-            }
+
+
             time = 0f;
-            
+            anim.SetBool("sens", false);
             anim.SetBool("droite", false);
             anim.SetBool("gauche", true);
             anim.SetBool("repos", false);
-            centerBox.x = -2;
-            box.center = centerBox;
+            sens = -1;
+            
+            
 
         }
         if(Input.GetAxisRaw("Horizontal")==0)
         {
             time += Time.deltaTime;
-            if( (time > 0.2f)&(controller.isGrounded) & (timercoup > 1.2))
+            if( (time > 0.2f)&(controller.isGrounded))
             {
-                sv.Stop();
-                sv.loop = false;
-                
                 anim.SetBool("droite", false);
                 anim.SetBool("gauche", false);
                 anim.SetBool("repos", true);
+                
+                
             }
         }
     
-        if (Input.GetButtonDown("Jump") && (jumpcount<3) & (timercoup > 1.2))
+        if (Input.GetButtonDown("Jump") && (jumpcount<3))
         {
-            anim.SetBool("coup", false);
-            sv.loop = false;
-            sv.clip = saut;
-            sv.Play();
+            
             mouvement.y = jumpSpeed;
             anim.SetBool("saut", true);
             
             jumpcount+=1; 
         }
         controller.Move(mouvement * Time.deltaTime);
-        Debug.DrawRay(transform.position, hitray.direction, Color.green);
-      /*  if (Input.GetButtonDown("Fire1"))
-        {
 
 
-            if (Physics.Raycast(hitray, out hit))
-            {
-                if (hit.rigidbody != null)
-                {
-
-                    mouvement.y = jumpSpeed;
-
-                }
-            }
-            
-        }*/
         
     }
 }
